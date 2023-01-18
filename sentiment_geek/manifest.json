@@ -1,0 +1,27 @@
+{
+  "name": "Sentiment Geek",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Turns the page red when you click the icon",
+ 
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ]
+
+  
+}
